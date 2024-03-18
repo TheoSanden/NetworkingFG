@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;" />
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: center; align-self: auto; justify-content: center;">
+        <ui:TextField picking-mode="Ignore" value="Enter Username..." name="UserNameField" style="height: 20%; width: 60%; align-self: center; justify-content: center; align-items: center;" />
+        <ui:Button text="Save" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Save" />
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1;" />
+</ui:UXML>

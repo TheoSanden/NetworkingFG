@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -23,14 +20,17 @@ public class PlayerController : NetworkBehaviour
       input.Enable();
       input.Player.Movement.performed += OnMovement;
       input.Player.Movement.canceled += OnMovementCanceled;
+      input.Player.Jump.performed += Jump;
    }
 
-   public override void OnNetworkDespawn() 
-   {
+   public override void OnNetworkDespawn() {
       base.OnNetworkDespawn();
+      if (input == null) {
+         return;}
       input.Disable();
       input.Player.Movement.performed -= OnMovement;
       input.Player.Movement.canceled -= OnMovementCanceled;
+      input.Player.Jump.performed -= Jump;
    }
    
 
@@ -38,6 +38,10 @@ public class PlayerController : NetworkBehaviour
    {
       if (!IsOwner) {
          return;}
+   }
+
+   private void Jump(InputAction.CallbackContext context) {
+      raycaster.Jump();
    }
 
    private void OnMovement(InputAction.CallbackContext context) 
@@ -49,4 +53,5 @@ public class PlayerController : NetworkBehaviour
    {
       raycaster.UpdateMovementInput(0);
    }
+   
 }

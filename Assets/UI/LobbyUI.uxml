@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MenuButtonLobby.uss?fileID=7433441132597879392&amp;guid=c29b6615c5406bb479ffc4ff7d4d4a7d&amp;type=3#MenuButtonLobby" />
+    <ui:VisualElement name="Header" style="flex-grow: 0; height: auto; flex-shrink: 1; flex-direction: row-reverse; justify-content: flex-start;">
+        <ui:VisualElement name="Right" style="flex-grow: 1; flex-direction: row-reverse;">
+            <ui:Button text="Refresh" parse-escape-sequences="true" display-tooltip-when-elided="true" view-data-key="Refresh" name="Refresh" class="button" />
+            <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Back" class="button" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Left" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Lobbies" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LobbiesHeader" style="align-items: flex-start; justify-content: flex-start; left: 0; -unity-font: url(&apos;project://database/Assets/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=45a077affa68cb24bad8badd76035782&amp;type=3#NotInter-Regular&apos;); color: rgb(255, 255, 255); font-size: 34px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:ScrollView name="LobbyScrollView" style="flex-grow: 1;" />
+</ui:UXML>

@@ -1,9 +1,17 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/ConnectionUI_Css.uss?fileID=7433441132597879392&amp;guid=6cb6943a08ad1104183cd899e3ff6807&amp;type=3#ConnectionUI_Css" />
     <ui:VisualElement style="flex-grow: 1;" />
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:Button text="Join Existing Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="JoinAsClient" class="button" style="justify-content: center; align-items: center; align-self: center; left: 0; top: 50%;" />
-        <ui:Button text="Host Game&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="host" class="button" style="justify-content: center; align-items: center; align-self: center; left: 0; top: 50%;" />
+    <ui:VisualElement style="flex-grow: 1; align-self: auto; align-items: stretch;">
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: center; align-items: center;">
+            <ui:Button text="Join With Code" parse-escape-sequences="true" display-tooltip-when-elided="true" name="JoinWithCode" class="button" style="justify-content: center; align-items: center; align-self: center; left: 0; top: auto;" />
+            <ui:TextField picking-mode="Ignore" value="Enter Code..." name="JoinCodeField" style="width: 30%; height: 30%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-shrink: 2;">
+            <ui:Button text="Host Game&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="host" class="button" style="justify-content: center; align-items: center; align-self: center; left: 0; top: 50%;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:Button text="View Lobbies&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ViewLobby" class="button" style="justify-content: center; align-items: center; align-self: center; left: 0; top: 50%;" />
+        </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement style="flex-grow: 1;" />
 </ui:UXML>

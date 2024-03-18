@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MenuButtonLobby.uss?fileID=7433441132597879392&amp;guid=c29b6615c5406bb479ffc4ff7d4d4a7d&amp;type=3#MenuButtonLobby" />
+    <ui:VisualElement name="LobbyContainer" style="flex-grow: 1; height: auto; max-height: none; min-height: auto; align-items: center; justify-content: center; margin-left: 5%; margin-right: 5%; flex-direction: row; align-self: auto;">
+        <ui:Label tabindex="-1" text="LobbyName" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LobbyName" style="font-size: 24px; color: rgb(255, 255, 255);" />
+        <ui:VisualElement style="flex-grow: 1;" />
+        <ui:Button text="Join" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Join" class="button" />
+        <ui:Label tabindex="-1" text="0/20" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Connections" />
+    </ui:VisualElement>
+</ui:UXML>

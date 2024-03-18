@@ -5,7 +5,7 @@ using UnityEngine;
 public class NetworkTransformClientAuthority : NetworkTransform
 {
    protected override bool OnIsServerAuthoritative() {
-      return true;
+      return false;
    }
 
    public override void OnNetworkSpawn() {

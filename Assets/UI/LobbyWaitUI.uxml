@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="Header" style="flex-grow: 1; flex-shrink: 4; justify-content: center; align-items: center;">
+            <ui:Label tabindex="-1" text="LobbyName" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LobbyName" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 7;">
+            <ui:ScrollView name="ConnectedPlayers" mode="Vertical" style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; flex-shrink: 3; align-items: stretch; justify-content: center;">
+            <ui:Button text="Leave" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Leave" />
+            <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Start" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
