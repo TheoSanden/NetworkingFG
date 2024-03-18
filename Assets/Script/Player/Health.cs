@@ -34,11 +34,21 @@ public class Health : NetworkBehaviour
         currentHealth.Value = maxHealth;
     }
 
-    public void Update() {
+    public void Update() 
+    {
         if (IsHost && IsOwner && Input.GetKeyDown(KeyCode.E))
         {
             ChangeHealth(-10);
         }
+        else if(IsOwner && Input.GetKeyDown(KeyCode.E))
+        {
+            TakeDamageOnServerTestServerRpc();
+        }
+    }
+    [ServerRpc]
+    private void TakeDamageOnServerTestServerRpc()
+    {
+        ChangeHealth(-10);
     }
 
     private void OnEnable() {
